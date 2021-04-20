@@ -19,6 +19,14 @@
   notify:
     - restart turn
 
+- name: enalble coturn
+  lineinfile:
+    path: /etc/default/coturn
+    regexp: '^TURNSERVER_ENABLED='
+    line: "TURNSERVER_ENABLED=1"
+  when:
+    - ansible_distribution_release == "bionic"
+
 - name: start turn
   ansible.builtin.service:
     name: "{{ turn_service }}"
