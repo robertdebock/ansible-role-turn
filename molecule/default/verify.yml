@@ -1,0 +1,10 @@
+---
+- name: Verify
+  hosts: all
+  become: no
+  gather_facts: no
+
+  tasks:
+    - name: check port 3478
+      ansible.builtin.wait_for:
+        port: 3478
