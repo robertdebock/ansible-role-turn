@@ -4,7 +4,7 @@ Install and configure a (co) turn server on your system.
 
 |GitHub|GitLab|Quality|Downloads|Version|
 |------|------|-------|---------|-------|
-|[![github](https://github.com/robertdebock/ansible-role-turn/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-turn/actions)|[![gitlab](https://gitlab.com/robertdebock/ansible-role-turn/badges/master/pipeline.svg)](https://gitlab.com/robertdebock/ansible-role-turn)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/robertdebock/turn)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/robertdebock/turn)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-turn.svg)](https://github.com/robertdebock/ansible-role-turn/releases/)|
+|[![github](https://github.com/robertdebock/ansible-role-turn/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-turn/actions)|[![gitlab](https://gitlab.com/robertdebock/ansible-role-turn/badges/master/pipeline.svg)](https://gitlab.com/robertdebock/ansible-role-turn)|[![quality](https://img.shields.io/ansible/quality/54410)](https://galaxy.ansible.com/robertdebock/turn)|[![downloads](https://img.shields.io/ansible/role/d/54410)](https://galaxy.ansible.com/robertdebock/turn)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-turn.svg)](https://github.com/robertdebock/ansible-role-turn/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -30,6 +30,7 @@ The machine needs to be prepared in CI this is done using `molecule/resources/pr
 
   roles:
     - role: robertdebock.bootstrap
+    - role: robertdebock.epel
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
@@ -57,6 +58,7 @@ The following roles are used to prepare a system. You may choose to prepare your
 | Requirement | GitHub | GitLab |
 |-------------|--------|--------|
 |[robertdebock.bootstrap](https://galaxy.ansible.com/robertdebock/bootstrap)|[![Build Status GitHub](https://github.com/robertdebock/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-bootstrap/actions)|[![Build Status GitLab ](https://gitlab.com/robertdebock/ansible-role-bootstrap/badges/master/pipeline.svg)](https://gitlab.com/robertdebock/ansible-role-bootstrap)|
+|[robertdebock.epel](https://galaxy.ansible.com/robertdebock/epel)|[![Build Status GitHub](https://github.com/robertdebock/ansible-role-epel/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-epel/actions)|[![Build Status GitLab ](https://gitlab.com/robertdebock/ansible-role-epel/badges/master/pipeline.svg)](https://gitlab.com/robertdebock/ansible-role-epel)|
 
 ## [Context](#context)
 
@@ -71,6 +73,8 @@ This role has been tested on these [container images](https://hub.docker.com/u/r
 
 |container|tags|
 |---------|----|
+|amazon|Candidate|
+|el|7, 8|
 |debian|all|
 |fedora|all|
 |opensuse|all|
