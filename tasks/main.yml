@@ -1,8 +1,8 @@
 ---
 # tasks file for turn
 
-- name: include assert.yml
-  import_tasks: assert.yml
+- name: import assert.yml
+  ansible.builtin.import_tasks: assert.yml
   run_once: yes
   delegate_to: localhost
 
@@ -19,8 +19,8 @@
   notify:
     - restart turn
 
-- name: enalble coturn
-  lineinfile:
+- name: enable coturn
+  ansible.builtin.lineinfile:
     path: /etc/default/coturn
     regexp: '^TURNSERVER_ENABLED='
     line: "TURNSERVER_ENABLED=1"
