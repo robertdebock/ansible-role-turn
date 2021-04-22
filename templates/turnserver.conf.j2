@@ -1,7 +1,7 @@
 listening-port={{ turn_listening_port }}
 {% if turn_fingerprint %}fingerprint{% endif %}
 {% if turn_lt_cred_mech %}lt-cred-mech{% endif %}
-%{ if turn_use_auth_secret %}use-auth-secret{% endif %}
+{% if turn_use_auth_secret %}use-auth-secret{% endif %}
 static-auth-secret={{ turn_static_auth_secret }}
 realm={{ turn_realm }}
 total-quota={{ turn_total_quota }}
