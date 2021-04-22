@@ -19,7 +19,7 @@
   notify:
     - restart turn
 
-- name: enalble coturn
+- name: enable coturn
   lineinfile:
     path: /etc/default/coturn
     regexp: '^TURNSERVER_ENABLED='
