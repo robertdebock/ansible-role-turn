@@ -96,3 +96,24 @@
       - turn_cli_password is defined
       - turn_cli_password is string
     quiet: yes
+
+- name: test if turn_server_name is set correctly
+  ansible.builtin.assert:
+    that:
+      - turn_server_name is defined
+      - turn_server_name is string
+    quiet: yes
+
+- name: test if turn_listening_ip is set correctly
+  ansible.builtin.assert:
+    that:
+      - turn_listening_ip is defined
+      - turn_listening_ip is string
+    quiet: yes
+
+- name: test if turn_external_ip is set correctly
+  ansible.builtin.assert:
+    that:
+      - turn_external_ip is defined
+      - turn_external_ip is string
+    quiet: yes
