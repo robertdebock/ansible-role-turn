@@ -45,7 +45,7 @@ These variables are set in `defaults/main.yml`:
 turn_listening_port: 3478
 turn_fingerprint: yes
 turn_lt_cred_mech: yes
-turn_use_auth_secret: yes
+turn_use_auth_secret: no
 turn_static_auth_secret: 96ef8dbed1ba36132d9cccfa608d1f90f879d7fb38cb5c18
 turn_realm: nextcloud.meinit.nl
 turn_total_quota: 100
@@ -54,6 +54,7 @@ turn_stale_nonce: 600
 turn_no_loopback_peers: yes
 turn_no_multicast_peers: yes
 turn_simple_log: yes
+turn_cli_password: 5S4QtTbkC2tzJj4jRKePZJlmCVU3ljnG
 ```
 
 ## [Requirements](#requirements)

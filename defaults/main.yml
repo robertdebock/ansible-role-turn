@@ -13,3 +13,4 @@ turn_stale_nonce: 600
 turn_no_loopback_peers: yes
 turn_no_multicast_peers: yes
 turn_simple_log: yes
+turn_cli_password: 5S4QtTbkC2tzJj4jRKePZJlmCVU3ljnG
