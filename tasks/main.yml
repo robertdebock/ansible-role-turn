@@ -27,6 +27,16 @@
   when:
     - ansible_distribution_release == "bionic"
 
+- name: place systemd override
+  copy:
+    src: override.conf
+    dest: /etc/systemd/system/coturn.service.d/override.conf
+    owner: root
+    group: root
+    mode: "0644"
+  when:
+    - ansible_os_family == "Debian"
+
 - name: start turn
   ansible.builtin.service:
     name: "{{ turn_service }}"
