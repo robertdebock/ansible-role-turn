@@ -18,6 +18,8 @@ This example is taken from `molecule/resources/converge.yml` and is tested on ea
 
   roles:
     - role: robertdebock.turn
+      turn_listening_ip: 0.0.0.0
+      turn_external_ip: 1.2.3.4
 ```
 
 The machine needs to be prepared in CI this is done using `molecule/resources/prepare.yml`:
@@ -55,6 +57,9 @@ turn_no_loopback_peers: yes
 turn_no_multicast_peers: yes
 turn_simple_log: yes
 turn_cli_password: 5S4QtTbkC2tzJj4jRKePZJlmCVU3ljnG
+turn_server_name: "{{ ansible_fqdn }}"
+turn_listening_ip: "{{ ansible_default_ipv4.address }}"
+turn_external_ip: "{{ ansible_default_ipv4.address }}"
 ```
 
 ## [Requirements](#requirements)

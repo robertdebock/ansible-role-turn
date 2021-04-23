@@ -88,7 +88,8 @@
   assert:
     that:
       - (turn_lt_cred_mech and not turn_use_auth_secret) or
-        (not turn_lt_cred_mech and turn_use_auth_secret
+        (not turn_lt_cred_mech and turn_use_auth_secret)
+    quiet: yes
 
 - name: test if turn_cli_password is set correctly
   ansible.builtin.assert:
