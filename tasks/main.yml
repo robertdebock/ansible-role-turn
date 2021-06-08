@@ -45,8 +45,22 @@
   when:
     - ansible_os_family == "Debian"
 
-- name: start turn
-  ansible.builtin.service:
-    name: "{{ turn_service }}"
-    state: started
-    enabled: yes
+- name: debug service
+  block:
+    - name: start turn
+      ansible.builtin.service:
+        name: "{{ turn_service }}"
+        state: started
+        enabled: yes
+  rescue:
+    - name: collect information
+      command: "{{ item }}"
+      register: my_service_collect_information
+      loop:
+        - journalctl --unit {{ turn_service }} --no-pager
+        - systemctl status {{ turn_service }}
+    - name: show information
+      debug:
+        msg: "{{ item }}"
+      loop: "{{ my_service_collect_information.results }}"
+
