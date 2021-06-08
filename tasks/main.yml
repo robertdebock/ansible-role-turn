@@ -63,4 +63,3 @@
       debug:
         msg: "{{ item }}"
       loop: "{{ my_service_collect_information.results }}"
-
