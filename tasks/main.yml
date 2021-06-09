@@ -59,6 +59,7 @@
       loop:
         - journalctl --unit {{ turn_service }} --no-pager
         - systemctl status {{ turn_service }}
+      failed_when: no
     - name: show information
       debug:
         msg: "{{ item }}"
