@@ -27,40 +27,8 @@
   when:
     - ansible_distribution_release == "bionic"
 
-- name: ensure /etc/systemd/system/coturn.service.d exists
-  ansible.builtin.file:
-    path: /etc/systemd/system/coturn.service.d
-    state: directory
-    owner: root
-    group: root
-    mode: "0755"
-
-- name: place systemd override
-  ansible.builtin.copy:
-    src: override.conf
-    dest: /etc/systemd/system/coturn.service.d/override.conf
-    owner: root
-    group: root
-    mode: "0644"
-  when:
-    - ansible_os_family == "Debian"
-
-- name: debug service
-  block:
-    - name: start turn
-      ansible.builtin.service:
-        name: "{{ turn_service }}"
-        state: started
-        enabled: yes
-  rescue:
-    - name: collect information
-      command: "{{ item }}"
-      register: my_service_collect_information
-      loop:
-        - journalctl --unit {{ turn_service }} --no-pager
-        - systemctl status {{ turn_service }}
-      failed_when: no
-    - name: show information
-      debug:
-        msg: "{{ item }}"
-      loop: "{{ my_service_collect_information.results }}"
+- name: start turn
+  ansible.builtin.service:
+    name: "{{ turn_service }}"
+    state: started
+    enabled: yes
