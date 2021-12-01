@@ -18,8 +18,8 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
 
   roles:
     - role: robertdebock.turn
-      turn_listening_ip: 0.0.0.0
-      turn_external_ip: 1.2.3.4
+      turn_listening_ip: "0.0.0.0"
+      turn_external_ip: "1.2.3.4"
 ```
 
 The machine needs to be prepared. In CI this is done using `molecule/default/prepare.yml`:
