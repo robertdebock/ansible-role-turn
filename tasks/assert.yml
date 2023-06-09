@@ -61,6 +61,7 @@
     that:
       - turn_static_auth_secret is defined
       - turn_static_auth_secret is string
+      - turn_static_auth_secret is not none
     quiet: yes
 
 - name: assert | Test if turn_realm is set correctly
@@ -68,6 +69,7 @@
     that:
       - turn_realm is defined
       - turn_realm is string
+      - turn_realm is not none
     quiet: yes
 
 - name: assert | Test if turn_total_quota is set correctly
@@ -96,6 +98,7 @@
     that:
       - turn_cli_password is defined
       - turn_cli_password is string
+      - turn_cli_password is not none
     quiet: yes
 
 - name: assert | Test if turn_server_name is set correctly
@@ -103,6 +106,7 @@
     that:
       - turn_server_name is defined
       - turn_server_name is string
+      - turn_server_name is not none
     quiet: yes
 
 - name: assert | Test if turn_listening_ip is set correctly
@@ -110,6 +114,7 @@
     that:
       - turn_listening_ip is defined
       - turn_listening_ip is string
+      - turn_listening_ip is not none
     quiet: yes
 
 - name: assert | Test if turn_external_ip is set correctly
@@ -117,4 +122,5 @@
     that:
       - turn_external_ip is defined
       - turn_external_ip is string
+      - turn_external_ip is not none
     quiet: yes
