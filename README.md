@@ -2,9 +2,9 @@
 
 Install and configure a (co) turn server on your system.
 
-|GitHub|GitLab|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![github](https://github.com/robertdebock/ansible-role-turn/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-turn/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-turn/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-turn)|[![quality](https://img.shields.io/ansible/quality/54410)](https://galaxy.ansible.com/robertdebock/turn)|[![downloads](https://img.shields.io/ansible/role/d/54410)](https://galaxy.ansible.com/robertdebock/turn)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-turn.svg)](https://github.com/robertdebock/ansible-role-turn/releases/)|
+|GitHub|GitLab|Downloads|Version|
+|------|------|---------|-------|
+|[![github](https://github.com/robertdebock/ansible-role-turn/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-turn/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-turn/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-turn)|[![downloads](https://img.shields.io/ansible/role/d/24611)](https://galaxy.ansible.com/robertdebock/turn)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-turn.svg)](https://github.com/robertdebock/ansible-role-turn/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -104,7 +104,7 @@ The minimum version of Ansible required is 2.12, tests have been done to:
 - The current version.
 - The development version.
 
-If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-turn/issues)
+If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-turn/issues).
 
 ## [License](#license)
 
