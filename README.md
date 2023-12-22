@@ -1,5 +1,7 @@
 # [Ansible role turn](#turn)
 
+> THIS ROLE HAS BEEN ARCHIVED AS OF DEC 2023.
+
 Install and configure a (co) turn server on your system.
 
 |GitHub|GitLab|Downloads|Version|
